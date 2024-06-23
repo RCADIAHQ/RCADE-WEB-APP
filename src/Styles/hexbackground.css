@@ -1,0 +1,10 @@
+body {
+    background-image: url('%PUBLIC_URL%/honeybg.jpg');
+    background-size: cover; /* Adjust to cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+    padding: 0;
+  }
+  

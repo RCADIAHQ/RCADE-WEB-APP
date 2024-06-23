@@ -1,0 +1,16 @@
+/* styles.css (or any other stylesheet) */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* Example blue color */
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+  }
+  
