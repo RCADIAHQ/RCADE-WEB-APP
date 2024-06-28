@@ -2,17 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { root as rootChain } from 'rootnameservice';
+import { WagmiProvider, createConfig, http } from "wagmi";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 
-import { WagmiConfig, createClient, chain } from 'wagmi';
-import { ConnectKitProvider, getDefaultClient } from 'connectkit';
+const queryClient = new QueryClient();
 
-const client = createClient(
-  getDefaultClient({
-    appName: 'My App Name',
-    //infuraId: process.env.REACT_APP_INFURA_ID,
-    //alchemyId:  process.env.REACT_APP_ALCHEMY_ID,
-    chains: [chain.mainnet, chain.polygon],
-  })
+
+
+const config = createConfig(
+  getDefaultConfig({
+
+    chains: [rootChain],
+    transports: {
+      [rootChain.id]: http(
+        rootChain.rpcUrls.default.http[0]
+      ),
+    },
+
+    walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
+
+    appName: "Your App Name",
+
+    appDescription: "Your App Description",
+    appUrl: "https://family.co", // your app's url
+    appIcon: "https://family.co/logo.png", // your app's icon, no bigger than 1024x1024px (max. 1MB)
+  }),
 );
 
 const root = ReactDOM.createRoot(
@@ -20,11 +36,23 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <WagmiConfig client={client}>
-      <ConnectKitProvider theme="auto">
-        <App />
-      </ConnectKitProvider>
-    </WagmiConfig>
+    <WagmiProvider config={config} >
+      <QueryClientProvider client={queryClient}>
+        <ConnectKitProvider 
+          theme="auto" 
+          options={{
+            enforceSupportedChains: true,
+          }}
+          customTheme={{
+            "--ck-connectbutton-background": "#ff00d9",
+            "--ck-connectbutton-color": "#150112",
+            
+          }}
+        >
+          <App />
+        </ConnectKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
   </React.StrictMode>
 );
 
