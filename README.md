@@ -1,4 +1,4 @@
-# Rcadia Meataverse Rcade
+# Rcadia Metaverse Rcade
 
 RCADIA is the premium metaverse arcade that seamlessly blends the nostalgia of retro gaming with the innovations of blockchain technology. 
 At its core, RCADIA will offer a diverse array of both classic and contemporary virtual arcade games, providing a unique platform where gamers can relive the charm of old-school arcades while enjoying the benefits of modern technologies.
