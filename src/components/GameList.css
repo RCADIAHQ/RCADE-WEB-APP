@@ -1,0 +1,75 @@
+.game-list-container {
+    overflow: hidden; /* Hide both horizontal and vertical scroll bars */
+    padding: 20px;
+    margin-left: 25px;
+    position: relative; /* Position arrows relative to this container */
+    z-index: 800;
+  }
+  
+  .game-list {
+    display: inline-flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* Ensure items are not wrapped and take the full width */
+    flex-wrap: nowrap;
+  }
+  
+  .game-item {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width to fit 3 items per row */
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    z-index: 800;
+  }
+  
+  .game-image {
+    width: 600px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .game-title {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  /* Arrow navigation styles */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 990;
+  }
+  
+  .arrow:hover {
+    background-color: #cb1dcd;
+    color: black;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  

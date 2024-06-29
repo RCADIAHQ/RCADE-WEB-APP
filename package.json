@@ -1,6 +1,9 @@
 {
-  "name": "rcadia-react-site",
-  "version": "0.1.0",
+  "name": "rcadia-web-app",
+  "version": "0.1.1",
+  "author": "Meta-Fusion-Labs-Ltd & Rcadia-Ltd",
+  "description": "A metaverse arcade built on The Root Network.",
+  "webpage": "https://rcadia.xyz/",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^5.48.0",
