@@ -1,0 +1,84 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --gameslider-padding: 5rem;
+    --gameslider-index: 0;
+}
+
+body {
+    margin: 0;
+}
+.game-carousel-container {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gameslider {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 .25rem;
+    transform: translateX(calc(var(--gameslider-index) * -100%));
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+.gameslider > img {
+    scroll-snap-align: start;
+    flex: 0 0 25%;
+    max-width: 25%;
+    aspect-ratio: 16/9;
+    padding: .25rem;
+    border-radius: .75rem;
+}
+
+.handle {
+    border: none;
+    border-radius: .5rem;
+    flex-grow: 0;
+    padding: 0 .5rem;
+    background-color: #fb00ff48;
+    transition: background-color 150ms ease-in-out;
+    z-index: 10;
+    margin: .25rem 0;
+    font-size: 2rem;
+    color:  #37ebf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-handle {
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.right-handle {
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.handle:hover,
+.handle:focus {
+    background-color: #fb00ff;
+    cursor: pointer;
+}
+
+.handle:hover .text {
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+.text {
+    transition: transform 150ms ease-in-out;
+}

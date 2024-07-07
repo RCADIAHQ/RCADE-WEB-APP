@@ -17,4 +17,4 @@ Explore a new dimension of gaming with us, where decentralized technology meets 
 Rcade Web App, created by Meta Fusion Labs & Rcadia Ltd, Built on The Root Network
 
 
-![alt text](<public/Screenshot (531).png>)
+![alt text](<public/App_Ui.png>)
