@@ -48,18 +48,18 @@ const GameCarousel: React.FC = () => {
                 <div className="text">&#8249;</div>
             </button>
             <div className="gameslider" ref={gamesliderRef}>
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=1" alt="1" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=2" alt="2" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=3" alt="3" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=4" alt="4" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=5" alt="5" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=6" alt="6" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=7" alt="7" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=8" alt="8" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=9" alt="9" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=10" alt="10" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=11" alt="11" />
-                <img src="https://via.placeholder.com/210/37ebf3/ffffff?text=12" alt="12" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Atem_Sprint.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Atem_Runner.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Zerpmon_G1.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
+                <img src="/assets/images/Game_Tiles/Coming_Soon.png" alt="" />
             </div>
             <button className="handle right-handle" ref={rightHandleRef}>
                 <div className="text">&#8250;</div>
