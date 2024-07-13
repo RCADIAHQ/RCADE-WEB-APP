@@ -1,0 +1,119 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Style the side navigation */
+.guildnav {
+    height: 100%;
+    width: 200px;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guildnav button {
+    margin-top: 50px;
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+  }
+  
+  .guildnav button:hover,
+  .guildnav button.active {
+    background-color: #ca1dcd;
+    color: black;
+  }
+  
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+/* Style the header */
+.header {
+    margin-top: 50px;
+    background-color: none;
+    padding: 30px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+/* Container for flexboxes */
+.row {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the Columns */
+.column {
+    background-color: #332d33;
+    color: #f1f1f1;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex: 1;
+    padding: 10px;
+    height: 350px; /* set height of column */
+    text-align: center;
+    text-shadow: 2px 2px #308a8f;
+    margin: 2px;
+    border-radius: 15px;
+    border: 2px solid #ca1dcd;
+}
+
+/* Style the column hover */
+.column:hover {
+    cursor: pointer;
+}
+
+/* Style the feed */
+.feed {
+    background-color: #332d33;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center;
+    color: #f1f1f1;
+    text-shadow: 2px 2px #ca1dcd;
+    margin: 2px;
+    margin-top: 5px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid #37ebf3;
+}
+
+.feed:hover {
+    cursor: pointer;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
