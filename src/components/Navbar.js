@@ -66,8 +66,7 @@ const WalletButton = ({ isConnected, isConnecting, show, address }) => {
   const rnsName = useGetRnsFromAddress(address);
 
   const buttonStyle = {
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    backgroundColor: "#ff00d9",
+    backgroundColor: "#ca1dcd",
     color: "#150112",
     padding: "10px",
     borderRadius: "5px",
